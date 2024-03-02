@@ -1,9 +1,9 @@
-var ritorno =  $prop('ThrustmastersPlugin.OverallGain').toString() +';';
+// var ritorno =  $prop('ThrustmastersPlugin.OverallGain').toString() +';';
 ritorno = ritorno + isnull($prop('DataCorePlugin.GameData.NewData.Gear'),   'N').toString()             + ';' ;
 ritorno = ritorno + format($prop('DataCorePlugin.GameData.NewData.SpeedKmh'),'0' ).toString()      + ';' ;
 ritorno = ritorno + format($prop('DataCorePlugin.GameData.NewData.Rpms' )  ,'0' ).toString()          + ';' ;
-if(ritorno.substring(0,1)==0)
-{
+// if(ritorno.substring(0,1)==0)
+// {
 	
 	ritorno = ritorno + format($prop('DataCorePlugin.GameData.NewData.MaxRpm')   ,'0' ).toString()       + ';' ;
 	ritorno = ritorno + $prop('DataCorePlugin.GameData.NewData.CurrentLapTime').toString().substring(3,10)           + ';' ;
@@ -28,14 +28,14 @@ if(ritorno.substring(0,1)==0)
 		}
 	    	ritorno += ers; 
 	}
-}
-else if (ritorno.substring(0,1)==1)
-{
-	ritorno = ritorno + $prop('DataCorePlugin.GameRawData.Physics.ErsPowerLevel')+';';
-	ritorno = ritorno + $prop('DataCorePlugin.GameRawData.Physics.ErsRecoveryLevel')+';';	
-	ritorno = ritorno + $prop('DataCorePlugin.GameRawData.Physics.ErsHeatCharging');
-}
-else if (ritorno.substring(0,1)==2)
-{
-}
+// }
+// else if (ritorno.substring(0,1)==1)
+// {
+// 	ritorno = ritorno + $prop('DataCorePlugin.GameRawData.Physics.ErsPowerLevel')+';';
+// 	ritorno = ritorno + $prop('DataCorePlugin.GameRawData.Physics.ErsRecoveryLevel')+';';	
+// 	ritorno = ritorno + $prop('DataCorePlugin.GameRawData.Physics.ErsHeatCharging');
+// }
+// else if (ritorno.substring(0,1)==2)
+// {
+// }
 return ritorno;
