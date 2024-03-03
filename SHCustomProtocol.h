@@ -38,14 +38,14 @@ public:
 	{
 		aggiornamentoVaiabili();
 
-    if(n)
-    {
-      if (pagina == 0)
-        setUp();
-      else if (pagina == 1)
-        setUp2();
-      n=false;
-    }
+		if(n)
+		{
+			if (pagina == 0)
+			setUp();
+			else if (pagina == 1)
+			setUp2();
+			n=false;
+		}
 
 		if(pagina==0)
 			aggiornaSchermo(tft);
